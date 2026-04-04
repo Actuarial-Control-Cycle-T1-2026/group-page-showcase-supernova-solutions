@@ -20,4 +20,4 @@ This page is written in Markdown.
 
 More information on GitHub Pages can be found [here](https://pages.github.com/).
 
-![](Actuarial.gif)
+![](/assets/Actuarial.gif)
