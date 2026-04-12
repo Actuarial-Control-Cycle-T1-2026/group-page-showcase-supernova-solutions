@@ -1,3 +1,5 @@
 remote_theme: pages-themes/primer@v0.6.0
+title: "2026 SOA Case Study: Supernova Solutions"
+description: "Pricing insurance for mining operations across three solar systems."
 plugins:
 - jekyll-remote-theme
