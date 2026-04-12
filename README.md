@@ -39,7 +39,50 @@ All products are structured as annually renewable policies with upfront premiums
 
 ## Business Interruption
 
+Galaxy General's Business Interruption coverage for Cosmic Quarry employs a risk transfer structure designed to protect both the insured and insurer from catastrophic tail risks while incentivising strong operational safety practices.
 
+### Design Overview
+
+- Coverage for financial losses incurred from suspended operations due to covered operational and environmental hazards
+- Đ30,000 per-occurrence deductible to discourage nuisance claims, with a maximum of 4 claims per policy year
+- Risk-adjusted coverage limits allocated by solar system based on production exposure and environmental risk profile
+- Excess-of-loss reinsurance protecting against catastrophic losses beyond the primary coverage layer
+- Safety-based premium discount program rewarding proactive inspection and operational governance
+- Exclusions for non-operational risks (e.g. planned maintenance, market fluctuations, unauthorised hazard zone entry)
+
+### Coverage Structure
+
+| Layer | Limit | Notes |
+|---|---|---|
+| Primary (Galaxy General) | Up to Đ110M | Allocated across solar systems by risk |
+| Reinsurance (XL) | Đ60M xs Đ110M | Covers catastrophic losses up to Đ170M |
+| Insured retention | Above Đ170M | Tail risk retained by Cosmic Quarry |
+
+Coverage limits by solar system reflect their distinct risk profiles:
+
+- **Helionis Cluster** — Đ60M limit. High risk: frequent micro-collisions, communication disruptions, and asteroid cluster events (54.5% of production volume)
+- **Bayesia System** — Đ25M limit. Lower risk: predictable radiation spike patterns (27.3% of production volume)
+- **Oryn Delta** — Đ25M limit. High risk: rapid orbital shear, fluctuating gravitational gradients, low-visibility environment (18.2% of production volume)
+
+### Key Insight
+
+The product balances risk transfer with behavioural incentives. By combining deductibles, claim frequency limits, and a safety discount program, it ensures that:
+
+- Minor, preventable disruptions remain with the insured
+- Catastrophic operational losses are effectively transferred through layered coverage
+- Strong safety practices are financially rewarded, aligning insurer and insured interests
+
+### Safety-Based Discount Program
+
+Premiums are reduced by **1.5% for each safety inspection above 3 per year**, capped at a **4.5% maximum discount**. This incentivises operational excellence and proactive maintenance — particularly valuable given Cosmic Quarry's history of environmental disputes and regulatory scrutiny.
+
+### Scalability
+
+An exposure-based pricing structure allows the product to scale alongside Cosmic Quarry's planned 15–25% operational expansion:
+
+- Coverage limits can be adjusted annually to reflect new production volumes
+- System-level allocations remain aligned with underlying exposure as operations grow
+- Annual repricing accommodates inflation, environmental condition changes, and evolving risk profiles
 
 ---
 
