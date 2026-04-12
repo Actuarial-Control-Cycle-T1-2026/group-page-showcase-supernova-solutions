@@ -133,7 +133,9 @@ An exposure-based pricing structure allows the product to scale seamlessly:
 
 A consistent actuarial framework was applied across all products to estimate aggregate losses, premiums, and revenues. The analysis employes a colelctive risk model, combining frequency and severity distributions with Monte Carlo simulations. A high-level overview of this process is shown below.
 
-<img src="assets/modelling_overview.png" width="100%">
+<div align="center">
+  <img src="assets/modelling_overview.png" width="100%">
+</div>
 
 ### Frequency and Severity Models
 
@@ -326,15 +328,21 @@ Due to the limited economic data available from the provided datasets (only 15 d
 
 Initial forecasts were produced using Autoregressive Integrated Moving Average (ARIMA) models for each time series individually. The forecasts continued the most recent observed rate constant across the 10-year horizon. We deemed these forecasts unreasonable given the recent economic environment of high inflation (between 2170-2173) as continuing the latest rate forward ignores likely changes in policy and market expectations. Hence, a more sophisticated modelling approach was used.
 
-<img src="assets/arima_forecasts.png" width="100%">
+<div align="center">
+  <img src="assets/arima_forecasts.png" width="95%">
+</div>
 
 A key limitation of ARIMA is that each series is modelled independently, potentially missing the economic relationships between the different series. To address this limitation, a Bayesia Vector Autoregression (BVAR) model was adopted for the final forecasting framework. Vector autoregression allows all variables in the system to depend on their own past values as well as the past value of other series, thereby capturing the relationships between inflation, policy rates, and market yields. The Bayesian framework was selected to mitigate overfitting, as the optimal lag length of 16 chosen by AIC results in a large number of parameters (16 × 4 = 64).
 
-<img src="assets/bvar_forecasts.png" width="100%">
+<div align="center">
+  <img src="assets/bvar_forecasts.png" width="100%">
+</div>
 
 Finally, monthly data was converted to yearly by taking the mean across the months. Annual yield curves were then constructed for each forecast year using cubic spline interpolation.
 
-<img src="assets/yield_3d_plot.png" width="100%">
+<div align="center">
+  <img src="assets/yield_3d_plot.png" width="90%">
+</div>
 
 # Risk Assessment
 
