@@ -150,8 +150,8 @@ A consistent actuarial framework was applied across all products to estimate agg
   <tbody>
     <tr>
       <td><strong>Business Interruption</strong></td>
-      <td></td>
-      <td></td>
+      <td>Hurdle Negative Binomial with exposure offset</td>
+      <td>Lognormal GLM</td>
     </tr>
     <tr>
       <td><strong>Cargo Loss</strong></td>
