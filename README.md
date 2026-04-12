@@ -88,6 +88,33 @@ An exposure-based pricing structure allows the product to scale alongside Cosmic
 
 ## Cargo Loss
 
+Galaxy General proposes a pooled cargo transport insurance product designed to protect Cosmic Quarry against physical loss or damage to routine mining shipments while maintaining pricing efficiency and capital stability.
+
+### Design Overview
+
+- Indemnity coverage for cargo loss or damage during transit up to declared shipment value  
+- 5% per-shipment deductible to reduce minor claims and maintain risk sharing  
+- Portfolio-level premium determined using aggregate loss modelling with a 95th percentile risk margin  
+- Coverage includes standard mining cargo (e.g. rare earths, lithium, cobalt, titanium) and an option to include supplies into the cargo mix  
+- Exclusion of high-value precious metals (gold and platinum), which are underwritten separately  
+- No baseline reinsurance required due to diversification across a large volume of shipments  
+
+### Key Insight
+
+The product leverages diversification across thousands of shipments to stabilise losses and reduce volatility. By excluding high-value precious cargo from the pooled portfolio, the design avoids disproportionate tail risk and ensures that routine shipments remain affordable and efficiently priced.
+
+### High-Value Cargo Treatment
+
+Precious metal shipments are excluded from the pooled product and priced separately using a rate-on-value approach. This reflects their extreme severity risk and prevents cross-subsidisation from lower-risk cargo, improving both pricing fairness and capital efficiency.
+
+### Scalability
+
+The product is highly scalable and adapts to operational growth:
+
+- Annual repricing adjusts for shipment volume, cargo mix, and environmental changes  
+- Exposure-based modelling allows seamless incorporation of new routes and vessels  
+- Portfolio structure remains stable as operations expand across solar systems  
+
 
 ---
 
@@ -141,6 +168,43 @@ A consistent actuarial framework was applied across all products:
 ---
 
 ## Cargo Loss
+
+A stochastic actuarial framework was developed to model aggregate cargo losses, combining frequency and severity models with a detailed exposure-based portfolio.
+
+### Modelling Approach
+
+- Claim frequency modelled using a Poisson GLM with exposure offsets  
+- Claim severity modelled using a lognormal loss-ratio approach  
+- Loss ratio defined as claim amount divided by cargo value to isolate severity drivers  
+- Exposure portfolio constructed from vessel capacity, shipment volumes, and cargo mix assumptions  
+- Monte Carlo simulation used to generate aggregate annual loss distributions  
+- Premiums determined using a 95th percentile risk margin with expense loadings  
+
+This framework ensures consistency between exposure, pricing, and risk modelling.
+
+### Key Results
+
+- Expected annual cargo losses of approximately Đ666M with low volatility  
+- 1-in-100 year losses of approximately Đ728M under baseline conditions  
+- Positive expected net revenue, with limited downside risk in extreme years  
+- Strong diversification effects due to high shipment volume and route dispersion  
+
+Over the long term, the portfolio remains profitable with stable loss behaviour, even as exposure grows.
+
+### Key Insight
+
+The cargo portfolio is characterised by high frequency, low-to-moderate severity losses, resulting in a stable aggregate distribution. Diversification significantly reduces volatility, making the portfolio well-suited to pooled pricing without requiring reinsurance under normal conditions.
+
+However, the portfolio remains exposed to system-wide environmental shocks, highlighting the importance of maintaining conservative pricing margins.
+
+### Stress Testing
+
+Stress testing was performed by applying correlated increases in environmental risk factors (radiation, debris, and route instability) across all solar systems.
+
+- Mean losses increased from Đ666M to Đ933M  
+- 1-in-100 year losses increased to approximately Đ1.01B  
+
+These results demonstrate that while diversification stabilises baseline outcomes, correlated shocks can materially increase losses. This supports the use of risk margins and capital buffers in pricing.
 
 
 
