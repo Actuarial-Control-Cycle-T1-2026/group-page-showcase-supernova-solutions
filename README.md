@@ -74,7 +74,7 @@ The product balances risk transfer with behavioural incentives. By combining ded
 
 ### Safety-Based Discount Program
 
-Premiums are reduced by **1.5% for each safety inspection above 3 per year**, capped at a **4.5% maximum discount**. This incentivises operational excellence and proactive maintenance — particularly valuable given Cosmic Quarry's history of environmental disputes and regulatory scrutiny.
+Premiums are reduced by **1.5% for each safety inspection above 3 per year**, capped at a **4.5% maximum discount**. This incentivises operational excellence and proactive maintenance, which is particularly valuable given Cosmic Quarry's history of environmental disputes and regulatory scrutiny.
 
 ### Scalability
 
