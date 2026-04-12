@@ -131,7 +131,7 @@ An exposure-based pricing structure allows the product to scale seamlessly:
 
 ### Modelling Procedure
 
-A consistent actuarial framework was applied across all products to estimate aggregate losses, premiums, and revenues. The analysis employes a colelctive risk model, combining frequency and severity distributions with Monte Carlo simulations. A high-level overview of this process is shown below.
+A consistent actuarial framework was applied across all products to estimate aggregate losses, premiums, and revenues. The analysis employes a collective risk model, combining frequency and severity distributions with Monte Carlo simulations. A high-level overview of this process is shown below.
 
 <div align="center">
   <img src="assets/modelling_overview.png" width="100%">
