@@ -50,6 +50,30 @@ All products are structured as annually renewable policies with upfront premiums
 
 ## Equipment Failure
 
+Equipment reliability is critical to Cosmic Quarry’s mining operations, where failures can result in significant repair costs and operational downtime. Exposure to radiation, debris, and gravitational instability further amplifies this risk.
+
+We designed an indemnity-based insurance product that protects against equipment breakdown while maintaining incentives for effective maintenance and risk management.
+
+### Design Overview
+
+- Coverage for repair or replacement costs following mechanical failure  
+- Per-claim deductible to reduce minor claims and promote risk sharing  
+- Risk-adjusted premiums reflecting equipment type, operating conditions, and environment  
+- Exclusions for non-operational risks (e.g. deliberate damage or poor maintenance)
+
+### Key Insight
+
+The product balances risk transfer and behavioural incentives. By combining deductibles with risk-based pricing, it ensures that:
+- Minor, preventable losses remain with the insured  
+- Severe operational risks are effectively transferred  
+
+### Scalability
+
+An exposure-based pricing structure allows the product to scale seamlessly:
+- New equipment can be added without redesign  
+- Risk groups ensure pricing remains aligned with underlying exposure  
+- Policy parameters are indexed to inflation to maintain long-term relevance  
+
 
 ---
 
@@ -79,7 +103,36 @@ A consistent actuarial framework was applied across all products:
 
 ---
 
-## Equipment Failure
+## Equipment Failure (Pricing & Capital)
+
+A structured actuarial framework was used to model equipment failure risk, combining frequency and severity models with detailed risk segmentation.
+
+### Modelling Approach
+
+- Frequency modelled using a Poisson GLM  
+- Severity modelled using a lognormal GLM  
+- Risks segmented across equipment type, age, maintenance, and environment  
+
+This produced a granular pricing structure, improving alignment between premiums and underlying risk.
+
+### Key Results
+
+- Expected losses are stable with relatively low volatility  
+- The portfolio remains profitable across both short and long-term projections  
+- Tail risk is effectively managed through deductibles and reinsurance  
+
+### Key Insight
+
+The strength of this portfolio lies in granularity and stability:
+- Detailed risk grouping reduces pricing error  
+- Low volatility leads to consistent financial performance  
+- Reinsurance protects against large individual losses  
+
+### Stress Testing
+
+Stress scenarios show that while extreme shocks may lead to occasional losses, the overall pricing structure remains financially robust.
+
+This confirms that the product is well-capitalised and resilient under adverse conditions.
 
 
 
