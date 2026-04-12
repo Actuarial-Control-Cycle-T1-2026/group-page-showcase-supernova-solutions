@@ -1,43 +1,27 @@
-# Galaxy General Insurance: Cosmic Quarry Risk & Pricing Solution 🚀
+# 2026 SOA Case Study: Supernova Solutions
+
+Team members: Kaleb Vegvari, Samuel Johnston, Oliver Zhou, Seonwoo Baek, Sebastien Nakhoul.
 
 ## Table of Contents
 - [Project Overview](#project-overview)
-- [Executive Summary](#executive-summary)
-- [Product Design](#product-design)
-  - [Business Interruption](#business-interruption)
-  - [Cargo Loss](#cargo-loss)
-  - [Equipment Failure](#equipment-failure)
-  - [Workers Compensation](#workers-compensation)
-- [Summary of Pricing & Capital Modelling](#summary-of-pricing--capital-modelling)
-  - [Business Interruption](#business-interruption-1)
-  - [Cargo Loss](#cargo-loss-1)
-  - [Equipment Failure](#equipment-failure-1)
-  - [Workers Compensation](#workers-compensation-1)
+- [Business Interruption Coverage](#business-interruption-coverage)
+- [Cargo Loss Coverage](#cargo-loss-coverage)
+- [Equipment Failure Coverage](#equipment-failure-coverage)
+- [Workers Compensation Coverage](#workers-compensation-coverage)
+- [Pricing & Capital Modelling](#pricing--capital-modelling)
+  - [Modelling Procedure](#modelling-procedure)
+  - [Frequency and Severity Models](#frequency-and-severity-models)
+  - [Pricing Results](#pricing-results)
+  - [Stress Testing](#stress-testing)
 - [Risk Assessment](#risk-assessment)
 - [Key Assumptions](#key-assumptions)
 - [Data Limitations](#data-limitations)
-- [Conclusion](#conclusion)
-- [Further Resources](#further-resources)
-
----
 
 ## Project Overview
 
+Our team was tasked with developing an insurance pricing strategy for Galaxy General Insurance Company in response to a request for proposals from Cosmic Quarry Mining Corporation. The objective was to design and price coverage across four key hazard areas: Equipment Failure, Cargo Loss, Workers' Compensation, and Business Interruption, for mining operations spanning three solar systems: Helionis Cluster, Bayesia System, and Oryn Delta. Our approach combined actuarial modelling and statistical estimation to produce short and long term projections of aggregate costs, returns, and net revenue, including expected values, variance estimates, and tail risk analysis. 
 
-
----
-
-## Executive Summary
-
-
-
----
-
-# Product Design
-
-All products are structured as annually renewable policies with upfront premiums and flexible scalability.
-
-## Business Interruption
+## Business Interruption Coverage
 
 Galaxy General's Business Interruption coverage for Cosmic Quarry employs a risk transfer structure designed to protect both the insured and insurer from catastrophic tail risks while incentivising strong operational safety practices.
 
@@ -84,9 +68,7 @@ An exposure-based pricing structure allows the product to scale alongside Cosmic
 - System-level allocations remain aligned with underlying exposure as operations grow
 - Annual repricing accommodates inflation, environmental condition changes, and evolving risk profiles
 
----
-
-## Cargo Loss
+## Cargo Loss Coverage
 
 Galaxy General proposes a pooled cargo transport insurance product designed to protect Cosmic Quarry against physical loss or damage to routine mining shipments while maintaining pricing efficiency and capital stability.
 
@@ -115,14 +97,9 @@ The product is highly scalable and adapts to operational growth:
 - Exposure-based modelling allows seamless incorporation of new routes and vessels  
 - Portfolio structure remains stable as operations expand across solar systems  
 
+## Equipment Failure Coverage
 
----
-
-## Equipment Failure
-
-Equipment reliability is critical to Cosmic Quarry’s mining operations, where failures can result in significant repair costs and operational downtime. Exposure to radiation, debris, and gravitational instability further amplifies this risk.
-
-We designed an indemnity-based insurance product that protects against equipment breakdown while maintaining incentives for effective maintenance and risk management.
+Equipment reliability is critical to Cosmic Quarry’s mining operations, where failures can result in significant repair costs and operational downtime. Exposure to radiation, debris, and gravitational instability further amplifies this risk. We designed an indemnity-based insurance product that protects against equipment breakdown while maintaining incentives for effective maintenance and risk management.
 
 ### Design Overview
 
@@ -144,137 +121,262 @@ An exposure-based pricing structure allows the product to scale seamlessly:
 - Risk groups ensure pricing remains aligned with underlying exposure  
 - Policy parameters are indexed to inflation to maintain long-term relevance  
 
+## Workers Compensation Coverage
 
----
+[TODO]
 
-## Workers Compensation
+## Pricing & Capital Modelling
 
+### Modelling Procedure
 
----
+A consistent actuarial framework was applied across all products to estimate aggregate losses, premiums, and revenues. The analysis employes a colelctive risk model, combining frequency and severity distributions with Monte Carlo simulations. A high-level overview of this process is shown below.
 
-# Summary of Pricing & Capital Modelling
+<img src="assets/modelling_overview.png" width="100%">
 
-A consistent actuarial framework was applied across all products:
-- Frequency and severity modelled separately  
-- Monte Carlo simulation used to generate aggregate loss distributions  
-- Premiums determined using risk-adjusted principles  
-- Long-term projections incorporate growth, inflation, and interest rates  
+### Frequency and Severity Models
 
----
+<table>
+  <thead>
+    <tr>
+      <th>Line of Business</th>
+      <th>Frequency Model</th>
+      <th>Severity Model</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Business Interruption</strong></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><strong>Cargo Loss</strong></td>
+      <td>Poisson GLM with exposure offset</td>
+      <td>Lognormal GLM on loss-ratio</td>
+    </tr>
+    <tr>
+      <td><strong>Equipment Failure</strong></td>
+      <td>Poisson GLM with exposure offset</td>
+      <td>Lognormal GLM</td>
+    </tr>
+    <tr>
+      <td><strong>Workers' Compensation</strong></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
 
-## Business Interruption
+### Pricing Results
 
+<table>
+  <thead>
+    <tr>
+      <th rowspan="2">Line of Business</th>
+      <th rowspan="2">Metric</th>
+      <th colspan="3">Short Term (2175)</th>
+      <th colspan="3">Long Term (2184) - Present Values</th>
+    </tr>
+    <tr>
+      <th>Mean</th><th>Std Dev</th><th>VaR(99%)</th>
+      <th>Mean</th><th>Std Dev</th><th>VaR(99%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="3"><strong>Business Interruption</strong></td>
+      <td>Claim Losses</td>
+      <td>49.0</td>
+      <td>34.4</td>
+      <td>168.0</td>
+      <td>539.0</td>
+      <td>115.3</td>
+      <td>862.7</td>
+    </tr>
+    <tr>
+      <td>Total Cost</td>
+      <td>57.9</td>
+      <td>34.4</td>
+      <td>176.9</td>
+      <td>654.3</td>
+      <td>115.3</td>
+      <td>978.0</td>
+    </tr>
+    <tr>
+      <td>Net Revenue</td>
+      <td>31.4</td>
+      <td>34.4</td>
+      <td>-86.8</td>
+      <td>306.4</td>
+      <td>115.3</td>
+      <td>8.3</td>
+    </tr>
+    <tr>
+      <td rowspan="3"><strong>Cargo Loss</strong></td>
+      <td>Claim Losses</td>
+      <td>666.0</td>
+      <td>25.7</td>
+      <td>728.0</td>
+      <td>7,360</td>
+      <td>85.0</td>
+      <td>7,550</td>
+    </tr>
+    <tr>
+      <td>Total Cost</td>
+      <td>745.0</td>
+      <td>25.7</td>
+      <td>807.0</td>
+      <td>285.0</td>
+      <td>67.4</td>
+      <td>487.0</td>
+    </tr>
+    <tr>
+      <td>Net Revenue</td>
+      <td>42.7</td>
+      <td>25.7</td>
+      <td>-19.5</td>
+      <td>446.0</td>
+      <td>85.0</td>
+      <td>248.8</td>
+    </tr>
+    <tr>
+      <td rowspan="3"><strong>Equipment Failure</strong></td>
+      <td>Claim Losses</td>
+      <td>81.6</td>
+      <td>2.7</td>
+      <td>88.0</td>
+      <td>945.6</td>
+      <td>9.4</td>
+      <td>967.4</td>
+    </tr>
+    <tr>
+      <td>Total Cost</td>
+      <td>116.6</td>
+      <td>2.7</td>
+      <td>123.0</td>
+      <td>1,050</td>
+      <td>9.4</td>
+      <td>1,080</td>
+    </tr>
+    <tr>
+      <td>Net Revenue</td>
+      <td>13.6</td>
+      <td>2.7</td>
+      <td>7.2</td>
+      <td>69.6</td>
+      <td>9.4</td>
+      <td>47.8</td>
+    </tr>
+    <tr>
+      <td rowspan="3"><strong>Workers Compensation</strong></td>
+      <td>Claim Losses</td>
+      <td>8.3</td>
+      <td>0.6</td>
+      <td>9.8</td>
+      <td>89.9</td>
+      <td>2.0</td>
+      <td>94.7</td>
+    </tr>
+    <tr>
+      <td>Total Cost</td>
+      <td>11.4</td>
+      <td>0.6</td>
+      <td>12.9</td>
+      <td>122.4</td>
+      <td>2.0</td>
+      <td>127.2</td>
+    </tr>
+    <tr>
+      <td>Net Revenue</td>
+      <td>1.2</td>
+      <td>0.4</td>
+      <td>-0.02</td>
+      <td>10.0</td>
+      <td>1.3</td>
+      <td>-6.9</td>
+    </tr>
+  </tbody>
+</table>
 
----
+> **Note**: All figures are in Đ millions. Long term results are cumulative aggregates across the 10-year horizon, not annualised. Metrics were calculated as:
+> - Claim Losses = Monte Carlo Simulated Losses
+> - Total Cost = Claim Losses + Expenses + Reinsurance Cost
+> - Net Revenue = Total Premiums - Total Costs
 
-## Cargo Loss
+All 4 portfolio demonstrate positive profitability, with varying levels of volatility:
 
-A stochastic actuarial framework was developed to model aggregate cargo losses, combining frequency and severity models with a detailed exposure-based portfolio.
-
-### Modelling Approach
-
-- Claim frequency modelled using a Poisson GLM with exposure offsets  
-- Claim severity modelled using a lognormal loss-ratio approach  
-- Loss ratio defined as claim amount divided by cargo value to isolate severity drivers  
-- Exposure portfolio constructed from vessel capacity, shipment volumes, and cargo mix assumptions  
-- Monte Carlo simulation used to generate aggregate annual loss distributions  
-- Premiums determined using a 95th percentile risk margin with expense loadings  
-
-This framework ensures consistency between exposure, pricing, and risk modelling.
-
-### Key Results
-
-- Expected annual cargo losses of approximately Đ666M with low volatility  
-- 1-in-100 year losses of approximately Đ728M under baseline conditions  
-- Positive expected net revenue, with limited downside risk in extreme years  
-- Strong diversification effects due to high shipment volume and route dispersion  
-
-Over the long term, the portfolio remains profitable with stable loss behaviour, even as exposure grows.
-
-### Key Insight
-
-The cargo portfolio is characterised by high frequency, low-to-moderate severity losses, resulting in a stable aggregate distribution. Diversification significantly reduces volatility, making the portfolio well-suited to pooled pricing without requiring reinsurance under normal conditions.
-
-However, the portfolio remains exposed to system-wide environmental shocks, highlighting the importance of maintaining conservative pricing margins.
+- **Business Interruption** shows the highest relative volatility, with short-term tail risk dipping to -Đ86.8M, though long-term profitability improves to a mean of Đ306.4M with a near breakeven VaR(99%) of Đ8.3M.
+- **Cargo Loss** carries short-term tail risk of -Đ19.5M, but recovers strongly over the long term with the highest mean net revenue at Đ446.0M and a robust VaR(99%) of Đ248.8M.
+- **Equipment Failure** shows low volatility across both horizons and remains profitable, with positive VaR(99%) of Đ7.2M and Đ47.8M in the short and long term respectively.
+- **Workers Compensation** is the smallest contributor by volume, with the lowest standard deviation across both horizons, though its negative long-term VaR(99%) of -Đ6.9M indicates susceptibility to tail risks over a long-term horizon.
 
 ### Stress Testing
 
-Stress testing was performed by applying correlated increases in environmental risk factors (radiation, debris, and route instability) across all solar systems.
-
-- Mean losses increased from Đ666M to Đ933M  
-- 1-in-100 year losses increased to approximately Đ1.01B  
-
-These results demonstrate that while diversification stabilises baseline outcomes, correlated shocks can materially increase losses. This supports the use of risk margins and capital buffers in pricing.
-
-
-
----
-
-## Equipment Failure (Pricing & Capital)
-
-A structured actuarial framework was used to model equipment failure risk, combining frequency and severity models with detailed risk segmentation.
-
-### Modelling Approach
-
-- Frequency modelled using a Poisson GLM  
-- Severity modelled using a lognormal GLM  
-- Risks segmented across equipment type, age, maintenance, and environment  
-
-This produced a granular pricing structure, improving alignment between premiums and underlying risk.
-
-### Key Results
-
-- Expected losses are stable with relatively low volatility  
-- The portfolio remains profitable across both short and long-term projections  
-- Tail risk is effectively managed through deductibles and reinsurance  
-
-### Key Insight
-
-The strength of this portfolio lies in granularity and stability:
-- Detailed risk grouping reduces pricing error  
-- Low volatility leads to consistent financial performance  
-- Reinsurance protects against large individual losses  
-
-### Stress Testing
-
-Stress scenarios show that while extreme shocks may lead to occasional losses, the overall pricing structure remains financially robust.
-
-This confirms that the product is well-capitalised and resilient under adverse conditions.
-
-
-
----
-
-## Workers Compensation
-
-
-
----
+- **Business Interruption**: Stress testing was preformed by applying a large 10% shocks to both claim frequency and severity across all solar
+systems. This increased the expected losses to 88M and VaR(99%) to 247M (45% increase). This resulted in a loss probability of 45%. However, as Galaxy General's solvency ratios exceed Galactic Insurance Authority benchmarks and a still favourable profit probability, the current coverage structure and reinsurance plan provide adequate company solvency protection.
+- **Cargo Loss**: Stress testing was performed by applying correlated increases in environmental risk factors (radiation, debris, and route instability) across all solar systems. Mean losses increased from Đ666M to Đ933M. 1-in-100 year losses increased to approximately Đ1.01B. These results demonstrate that while diversification stabilises baseline outcomes, correlated shocks can materially increase losses. This supports the use of risk margins and capital buffers in pricing.
+- **Equipment Failure**: Stress testing indicate that while extreme shocks may produce occasional losses, the pricing structure remains financially robust.
+- **Workers Compensation**: Stress testing was conducted by applying shocks to the simulated annual workers’ compensation aggregate loss distribution. Five scenarios were considered: (1) a +30% increase in claim frequency, (2) a +20% increase in claim severity, (3) worsened tail risk through higher probability and severity of extreme claims, (4) a combined adverse scenario applying all shocks simultaneously, and (5) a 1-in-100 catastrophe year with substantial increases to frequency, severity, and tail probability.
 
 # Risk Assessment
 
-The primary risks were grouped into three key categories:
+Risk analysis was conducted by individual solar system profiles. Each solar system presented distinct risks. Helionis Cluster was dominated by debris and collision hazards, Bayesia System by radiation spikes, and Oryn Delta by low visibility and gravity instability around the asteroid ring.
 
-### Environmental Hazard Risk
-- Debris collisions, radiation exposure, and orbital instability  
-- Highest impact and likelihood across all systems  
+### Risk Identification by Solar System
 
-### Solar Event Risk
-- Cross-system radiation storms and communication failures  
-- Potential for correlated losses across multiple lines  
+<table>
+  <thead>
+    <tr>
+      <th>Solar System</th>
+      <th>Identified Risk</th>
+      <th>Affected Businesses</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="4"><strong>Helionis Cluster</strong></td>
+      <td>Dense metallic asteroid clusters causing frequent micro-collisions and debris clouds, damaging vessels and/or equipment and/or employees.</td>
+      <td>CL, EF, WC</td>
+    </tr>
+    <tr>
+      <td>Irregular gravitational resonances causing vessel and/or equipment instability.</td>
+      <td>CL, EF</td>
+    </tr>
+    <tr>
+      <td>Communication disruptions arising from misaligned or damaged relay satellites, leading to disrupted or halted mining operations and/or equipment control failures.</td>
+      <td>BI, EF</td>
+    </tr>
+    <tr>
+      <td>Asteroid cluster events blocking mining and transportation routes and/or damaging vessels.</td>
+      <td>BI, CL</td>
+    </tr>
+    <tr>
+      <td rowspan="2"><strong>Bayesia System</strong></td>
+      <td>Radiation spikes during certain orbital alignments, causing radiation exposure injuries and/or mass evacuations and/or degraded electronics, navigation and control systems.</td>
+      <td>BI, EF, WC</td>
+    </tr>
+    <tr>
+      <td>Frequent temperature extremes causing thermal stress in equipment and/or thermal shock to employees.</td>
+      <td>EF, WC</td>
+    </tr>
+    <tr>
+      <td rowspan="2"><strong>Oryn Delta</strong></td>
+      <td>Low visibility environment, leading to vessel collisions and/or worker accidents.</td>
+      <td>CL, WC</td>
+    </tr>
+    <tr>
+      <td>Dense asymmetric asteroid ring producing rapid orbital shear and fluctuating gravitational gradients, leading to vessel collisions and/or transport hazards and/or employee injuries.</td>
+      <td>CL, EF, WC</td>
+    </tr>
+    <tr>
+      <td><strong>Cross-System Risks</strong></td>
+      <td>Solar storm or radiation event hitting multiple solar systems simultaneously, leading to radiation surges and/or communication outages and/or operational shutdowns.</td>
+      <td>BI,CL, EF, WC</td>
+    </tr>
+  </tbody>
+</table>
 
-### Operational Risk
-- Equipment stress, workforce safety, and system failures  
-
-Additional risks include:
-- Pricing and model risk  
-- Inflation risk  
-- Regulatory risk  
-- Catastrophic accumulation risk  
-
-The most critical exposure arises from correlated multi-system events, which can generate simultaneous large losses.
-
----
+> **Note**: BI = Business Interruption, CL = Cargo Loss, EF = Equipment Failure, WC = Workers' Compensation.
 
 # Key Assumptions
 
@@ -285,8 +387,6 @@ Key assumptions underlying the modelling include:
 - Exposure grows in line with operational expansion  
 
 These assumptions form the basis for pricing, projections, and capital modelling.
-
----
 
 # Data Limitations
 
@@ -300,20 +400,3 @@ Minimum reporting thresholds resulted in missing smaller claims, introducing pot
 - Conservative modelling assumptions  
 - Deductibles aligned with reporting thresholds  
 - Risk adjustments based on qualitative insights  
-
----
-
-# Conclusion
-
-
-
----
-
-# Further Resources
-
-- 📄 Full Report: *[Insert link to full report]*  
-- 💻 Code & Modelling: *[Insert GitHub repo or folders]*  
-- 📊 Appendix & Technical Details: *[Insert appendix link]*  
-
-For a deeper understanding of the modelling approach, assumptions, and detailed results, please refer to the full report and supporting materials.
-
