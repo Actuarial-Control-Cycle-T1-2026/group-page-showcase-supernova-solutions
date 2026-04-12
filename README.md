@@ -17,6 +17,7 @@ Team members: Kaleb Vegvari, Samuel Johnston, Oliver Zhou, Seonwoo Baek, Sebasti
 - [Risk Assessment](#risk-assessment)
 - [Key Assumptions](#key-assumptions)
 - [Data Limitations](#data-limitations)
+- [Full Report](#full-report)
 
 ## Project Overview
 
@@ -416,4 +417,8 @@ Minimum reporting thresholds resulted in missing smaller claims, introducing pot
 ### Mitigation
 - Conservative modelling assumptions  
 - Deductibles aligned with reporting thresholds  
-- Risk adjustments based on qualitative insights  
+- Risk adjustments based on qualitative insights
+
+# Full Report
+
+The information presented on this page is a summary of the complete case study report. The full report including all appendicies can be found here: **[Report (PDF)](Report.pdf)**.
