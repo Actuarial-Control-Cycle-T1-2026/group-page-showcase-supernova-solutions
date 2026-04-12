@@ -60,9 +60,9 @@ Galaxy General's Business Interruption coverage for Cosmic Quarry employs a risk
 
 Coverage limits by solar system reflect their distinct risk profiles:
 
-- **Helionis Cluster** — Đ60M limit. High risk: frequent micro-collisions, communication disruptions, and asteroid cluster events (54.5% of production volume)
-- **Bayesia System** — Đ25M limit. Lower risk: predictable radiation spike patterns (27.3% of production volume)
-- **Oryn Delta** — Đ25M limit. High risk: rapid orbital shear, fluctuating gravitational gradients, low-visibility environment (18.2% of production volume)
+- **Helionis Cluster**: Đ60M limit. High risk: frequent micro-collisions, communication disruptions, and asteroid cluster events (54.5% of production volume)
+- **Bayesia System**: Đ25M limit. Lower risk: predictable radiation spike patterns (27.3% of production volume)
+- **Oryn Delta**: Đ25M limit. High risk: rapid orbital shear, fluctuating gravitational gradients, low-visibility environment (18.2% of production volume)
 
 ### Key Insight
 
