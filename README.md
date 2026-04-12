@@ -371,12 +371,28 @@ Risk analysis was conducted by individual solar system profiles. Each solar syst
     <tr>
       <td><strong>Cross-System Risks</strong></td>
       <td>Solar storm or radiation event hitting multiple solar systems simultaneously, leading to radiation surges and/or communication outages and/or operational shutdowns.</td>
-      <td>BI,CL, EF, WC</td>
+      <td>BI, CL, EF, WC</td>
     </tr>
   </tbody>
 </table>
 
 > **Note**: BI = Business Interruption, CL = Cargo Loss, EF = Equipment Failure, WC = Workers' Compensation.
+
+### Interest and Inflation Modelling
+
+Due to the limited economic data available from the provided datasets (only 15 data points for each rate), external data was sourced instead. Upon inspection the provided rates appear to extremely closely resemble the behaviour of rates in the US market. Therefore, we decided it was appropriate to use US market data as a proxy for the provided rates, enabling more reliable and accurate time-series modelling.
+
+Initial forecasts were produced using Autoregressive Integrated Moving Average (ARIMA) models for each time series individually. The forecasts continued the most recent observed rate constant across the 10-year horizon. We deemed these forecasts unreasonable given the recent economic environment of high inflation (between 2170-2173) as continuing the latest rate forward ignores likely changes in policy and market expectations. Hence, a more sophisticated modelling approach was used.
+
+<img src="assets/arima_forecasts.png" width="100%">
+
+A key limitation of ARIMA is that each series is modelled independently, potentially missing the economic relationships between the different series. To address this limitation, a Bayesia Vector Autoregression (BVAR) model was adopted for the final forecasting framework. Vector autoregression allows all variables in the system to depend on their own past values as well as the past value of other series, thereby capturing the relationships between inflation, policy rates, and market yields. The Bayesian framework was selected to mitigate overfitting, as the optimal lag length of 16 chosen by AIC results in a large number of parameters (16 × 4 = 64).
+
+<img src="assets/bvar_forecasts.png" width="100%">
+
+Finally, monthly data was converted to yearly by taking the mean across the months. Annual yield curves were then constructed for each forecast year using cubic spline interpolation.
+
+<img src="assets/yield_3d_plot.png" width="100%">
 
 # Key Assumptions
 
