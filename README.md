@@ -166,7 +166,7 @@ A consistent actuarial framework was applied across all products to estimate agg
     <tr>
       <td><strong>Workers' Compensation</strong></td>
       <td>Poisson GLM with exposure offset</td>
-      <td>Lognormal GLM (body) + Generalised Pareto Distrbution (EVT tail)</td>
+      <td>Lognormal GLM (body) + Generalised Pareto Distribution (EVT tail)</td>
     </tr>
   </tbody>
 </table>
