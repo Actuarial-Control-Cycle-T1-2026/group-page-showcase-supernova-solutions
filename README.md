@@ -125,7 +125,31 @@ An exposure-based pricing structure allows the product to scale seamlessly:
 
 ## Workers Compensation Coverage
 
-[TODO]
+Cosmic Quarry employs a large workforce across operational mining and support roles, creating exposure to frequent low-severity workers’ compensation claims and occasional severe losses. Galaxy General proposes an annual workers’ compensation portfolio cover designed to protect against workplace injury and illness costs while maintaining fair risk-based pricing and capital stability.
+
+### Design Overview
+
+- Indemnity-style cover for eligible workplace injury and illness costs, including medical, rehabilitation, and income replacement benefits
+- **Ð600 per-claim deductible** to filter nuisance claims while preserving meaningful employee protection
+- Single annual premium paid at policy inception
+- Premiums differentiated by **occupation** and **employment type** to reflect workforce risk differences
+- **Per-claim excess-of-loss reinsurance** attaching at **Ð48,000 per claim** after the deductible, with a high/unlimited limit
+- Exclusions for non-work-related events, pre-existing conditions except work-related aggravation, intoxication or deliberate misconduct, and catastrophic systemic accumulation events
+
+### Key Insight
+
+The product is designed to balance affordability, fairness, and capital protection. A low deductible helps remove minor administrative claims without shifting excessive cost back to workers, while per-claim XoL reinsurance caps Galaxy General’s exposure to very large injury claims and stabilises annual results. Premium differentiation is based only on job-related factors, ensuring pricing remains risk-based but non-discriminatory.
+
+### Pricing and Capital Modelling
+
+Workers’ compensation aggregate losses were modelled using a **Poisson frequency model** and a **severity model with a truncated lognormal body and Generalised Pareto tail**, calibrated to historical claims data and deployed onto Cosmic Quarry’s workforce profile. Monte Carlo simulation was then used to estimate annual and long-term aggregate losses, insurer costs, and net revenue.
+
+Short-term results indicate expected annual claim losses of **Ð8.3M**, expected total insurer cost of **Ð11.4M**, and expected net revenue of **Ð1.2M**. Over the long term, present value claim losses are estimated at **Ð89.9M**, with total insurer costs of **Ð122.4M** and net revenue of **Ð10.0M**. Although the portfolio remains profitable on average, the adverse tail of the long-term net revenue distribution supports the use of reinsurance and capital buffers.
+
+### Stress Testing
+
+Stress testing was conducted by applying shocks to frequency, severity, and tail behaviour. Scenarios included a **+30% frequency shock**, **+20% severity shock**, **tail worsening**, a **combined adverse scenario**, and a **1-in-100 catastrophe year** with substantial increases to frequency, severity, and tail probability. These tests showed that while the portfolio is stable under baseline conditions, extreme adverse scenarios can materially worsen outcomes, reinforcing the need for conservative pricing and reinsurance protection.
+
 
 ## Pricing & Capital Modelling
 
