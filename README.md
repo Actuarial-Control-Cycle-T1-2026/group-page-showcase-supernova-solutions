@@ -165,8 +165,8 @@ A consistent actuarial framework was applied across all products to estimate agg
     </tr>
     <tr>
       <td><strong>Workers' Compensation</strong></td>
-      <td></td>
-      <td></td>
+      <td>Poisson GLM with exposure offset</td>
+      <td>Lognormal GLM</td>
     </tr>
   </tbody>
 </table>
